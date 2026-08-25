@@ -1,0 +1,10 @@
+[
+  { "id": "salary", "label": "Salary", "type": "income" },
+  { "id": "freelance", "label": "Freelance", "type": "income" },
+  { "id": "gift", "label": "Gift", "type": "income" },
+  { "id": "food", "label": "Food", "type": "expense" },
+  { "id": "transport", "label": "Transport", "type": "expense" },
+  { "id": "rent", "label": "Rent", "type": "expense" },
+  { "id": "airtime", "label": "Airtime", "type": "expense" },
+  { "id": "other", "label": "Other", "type": "expense" }
+]
