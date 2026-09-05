@@ -1,0 +1,29 @@
+.header {
+  height: 92px;
+  background: #2f7658;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  border-bottom: 7px solid #ffffff;
+}
+
+.header h1 {
+  margin: 0;
+  color: #163f2f;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 43px;
+  font-weight: 700;
+}
+
+.header-cart {
+  position: absolute;
+  right: 24px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #ffffff;
+  color: #2f7658;
+  padding: 7px 12px;
+  font-size: 13px;
+  font-weight: 700;
+}
