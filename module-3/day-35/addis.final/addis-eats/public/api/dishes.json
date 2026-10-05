@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1, "slug": "shiro", "name": "Shiro", "price": 120,
+    "category": "Vegetarian", "spicy": true, "special": true,
+    "image": "/images/shiro.jpg",
+    "description": "Silky chickpea stew simmered with onion, garlic and berbere, served bubbling hot with injera."
+  },
+  {
+    "id": 2, "slug": "tibs", "name": "Tibs", "price": 358,
+    "category": "Meat", "spicy": true, "special": true,
+    "image": "/images/tibs.jpg",
+    "description": "Tender cubes of beef sauteed with onion, rosemary and green chilli. A celebration-table classic."
+  },
+  {
+    "id": 3, "slug": "firfir", "name": "Firfir", "price": 100,
+    "category": "Breakfast", "spicy": false, "special": false,
+    "image": "/images/firfir.jpg",
+    "description": "Shredded injera tossed in mild spiced butter sauce - the comforting Ethiopian breakfast."
+  }
+]

@@ -1,0 +1,18 @@
+.filters{
+    display:flex;
+    gap:10px;
+    margin-bottom:20px;
+}
+
+.filters button{
+    padding:10px 18px;
+    border:none;
+    border-radius:20px;
+    cursor:pointer;
+    background:#ddd;
+}
+
+.filters button.active{
+    background:#1f7a5c;
+    color:white;
+}
