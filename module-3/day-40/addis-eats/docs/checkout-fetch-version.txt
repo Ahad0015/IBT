@@ -1,0 +1,66 @@
+Exercise step 3 reference: the checkout form talking to POST /api/orders with fetch().
+(The finished project uses the server action instead, as step 4 asks. This file is
+a .txt on purpose so it is not part of the build.)
+
+Your API takes ONE dish per order ({ name, phone, dishId, quantity, notes }), so the
+fetch version posts one request per cart line and branches on the STATUS CODE.
+
+"use client";
+
+import { useState } from "react";
+import { useCart } from "../providers";
+
+export default function CheckoutForm() {
+  const { items, dispatch } = useCart();
+  const [form, setForm] = useState({ name: "", phone: "", notes: "" });
+  const [fieldErrors, setFieldErrors] = useState({});
+  const [message, setMessage] = useState("");
+  const [pending, setPending] = useState(false);
+  const [ids, setIds] = useState(null);
+
+  async function handleSubmit(e) {
+    e.preventDefault();
+    setPending(true);
+    setFieldErrors({});
+    setMessage("");
+
+    const created = [];
+    for (const item of items) {
+      const res = await fetch("/api/orders", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: form.name,
+          phone: form.phone,
+          notes: form.notes || undefined,
+          dishId: item.id,
+          quantity: item.qty,
+        }),
+      });
+
+      if (res.status === 201) {
+        created.push((await res.json()).id);
+      } else if (res.status === 422) {
+        setFieldErrors((await res.json()).fieldErrors);
+        break;
+      } else {
+        setMessage((await res.json()).error);
+        break;
+      }
+    }
+
+    setPending(false);
+    if (created.length === items.length) {
+      dispatch({ type: "clear" });
+      setIds(created);
+    }
+  }
+
+  // ...render inputs bound to `form`, show fieldErrors.name[0] etc., and a button
+  // with disabled={pending}. Notice how much state you manage by hand here
+  // (pending, fieldErrors, message, ids): useActionState removes all of it.
+}
+
+Weakness to notice: if line 2 fails after line 1 succeeded, you have a half-placed
+order. The server action validates ALL lines before writing any, which is why
+placeOrder in app/actions.js is the better design.
