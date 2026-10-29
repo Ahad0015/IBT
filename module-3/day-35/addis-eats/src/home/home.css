@@ -1,0 +1,109 @@
+/* ---------- Hero ---------- */
+.hero {
+  position: relative;
+  overflow: hidden;
+  background: var(--green-700);
+  color: #fff;
+  padding-block: 56px 64px;
+}
+[data-theme='dark'] .hero { background: linear-gradient(160deg, #0f2a1e, #0b1410 70%); border-bottom: 1px solid var(--line); }
+.hero__glyph {
+  position: absolute;
+  right: -2%;
+  bottom: -14%;
+  font-family: 'Noto Sans Ethiopic', var(--font-body);
+  font-weight: 800;
+  font-size: clamp(11rem, 36vw, 26rem);
+  line-height: 1;
+  letter-spacing: -0.04em;
+  color: transparent;
+  -webkit-text-stroke: 2px rgb(242 176 30 / 0.55);
+  user-select: none;
+  pointer-events: none;
+}
+.hero__inner { position: relative; display: grid; gap: 18px; justify-items: start; }
+.hero__welcome { font-family: 'Noto Sans Ethiopic', var(--font-body); font-weight: 800; font-size: 1.15rem; color: var(--saffron-500); }
+.hero h1 { max-width: 16ch; font-size: clamp(2.4rem, 1.5rem + 4.4vw, 4.6rem); }
+.hero__lede { max-width: 48ch; font-size: 1.12rem; color: rgb(255 255 255 / 0.86); }
+.hero__cta { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 6px; }
+.hero__btn { background: var(--saffron-500); color: var(--on-accent); }
+.hero__btn:hover { background: #ffc93f; }
+.hero__btn-alt { color: #fff; border-color: rgb(255 255 255 / 0.5); }
+.hero__btn-alt:hover { background: rgb(255 255 255 / 0.12); border-color: #fff; }
+.hero :focus-visible { outline-color: #fff; }
+.hero__facts { display: flex; gap: 10px 28px; flex-wrap: wrap; margin-top: 14px; color: rgb(255 255 255 / 0.8); }
+.hero__facts strong { color: #fff; font-family: var(--font-display); font-size: 1.15rem; margin-right: 4px; }
+
+/* ---------- Sections ---------- */
+.home { display: grid; gap: 56px; padding-block: 48px 64px; }
+.home__section { display: grid; gap: 20px; scroll-margin-top: calc(var(--header-h) + 16px); }
+.section-head { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+.section-link { font-weight: 700; text-underline-offset: 3px; }
+
+.tiles { display: grid; gap: 14px; grid-template-columns: repeat(2, 1fr); }
+@media (min-width: 800px) { .tiles { grid-template-columns: repeat(4, 1fr); } }
+.tile {
+  display: grid;
+  gap: 4px;
+  align-content: end;
+  min-height: 190px;
+  height: 100%;
+  padding: 18px;
+  border-radius: var(--radius);
+  color: #fff;
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+  background: var(--cat-ethiopian);
+  transition: transform 0.2s ease;
+}
+.tile[data-category='Pizza'] { background: var(--cat-pizza); }
+.tile[data-category='Burgers'] { background: var(--cat-burgers); }
+.tile[data-category='Drinks'] { background: var(--cat-drinks); }
+.tile:hover { transform: translateY(-4px); }
+.tile::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to top, rgb(0 0 0 / 0.5), transparent 65%); }
+.tile > * { position: relative; z-index: 1; }
+.tile__emoji { position: absolute; right: 12px; top: 8px; font-size: 3.4rem; filter: drop-shadow(0 6px 8px rgb(0 0 0 / 0.3)); }
+.tile__name { font-family: var(--font-display); font-weight: 800; font-size: 1.35rem; }
+.tile__blurb { font-size: 0.85rem; opacity: 0.92; }
+.tile:focus-visible { outline-color: var(--focus); }
+
+.steps { display: grid; gap: 14px; counter-reset: step; }
+@media (min-width: 800px) { .steps { grid-template-columns: repeat(3, 1fr); } }
+.step { display: grid; gap: 8px; align-content: start; }
+.step__num {
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--accent);
+  color: var(--on-accent);
+  font-family: var(--font-display);
+  font-weight: 800;
+}
+/* ---------- Hero photo ---------- */
+.hero {
+  min-height: min(70vh, 560px);
+  display: grid;
+  align-items: center;
+}
+.hero__img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.hero__shade {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgb(11 61 41 / 0.7) 0%, rgb(11 61 41 / 0.4) 45%, rgb(11 61 41 / 0.0) 100%);
+}
+[data-theme='dark'] .hero__shade {
+  background: linear-gradient(90deg, rgb(11 20 16 / 0.94) 0%, rgb(11 20 16 / 0.65) 55%, rgb(11 20 16 / 0.3) 100%);
+}
+@media (max-width: 700px) {
+  .hero__shade { background: rgb(11 61 41 / 0.8); }
+}
