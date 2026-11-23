@@ -1,0 +1,6 @@
+@import "tailwindcss";
+
+/* Used by menu/FilterShell.js: hides every dish that is not vegetarian. */
+.veg-only li:not([data-category="Vegetarian"]) {
+  display: none;
+}

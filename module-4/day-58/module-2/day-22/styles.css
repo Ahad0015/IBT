@@ -1,0 +1,39 @@
+body {
+    font-family: Arial, sans-serif;
+    max-width: 500px;
+    margin: 40px auto;
+    padding: 0 20px;
+  }
+  
+  label {
+    display: block;
+    margin-top: 10px;
+  }
+  
+  input, select {
+    padding: 5px;
+    margin-top: 3px;
+  }
+  
+  button {
+    margin-top: 15px;
+    padding: 6px 14px;
+  }
+  
+  #status {
+    color: gray;
+  }
+  
+  #result {
+    font-weight: bold;
+    margin-top: 10px;
+  }
+  
+  #watchlist li {
+    margin-top: 5px;
+  }
+  
+  .rm {
+    margin-left: 10px;
+    cursor: pointer;
+  }

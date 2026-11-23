@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Birr Watch</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <h1>Birr Watch</h1>
+  <p id="status">Loading rates...</p>
+
+  <form id="convert-form">
+    <label for="amount">Amount (ETB)</label>
+    <input id="amount" type="number" value="100">
+
+    <label for="currency">Currency</label>
+    <select id="currency"></select>
+
+    <button type="submit">Convert</button>
+  </form>
+
+  <p id="result"></p>
+
+  <h2>Watchlist</h2>
+  <button id="watch">Add to watchlist</button>
+  <ul id="watchlist"></ul>
+
+  <script src="app.js"></script>
+</body>
+</html>

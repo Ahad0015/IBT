@@ -1,0 +1,53 @@
+.main {
+  min-width: 0;
+  background: #ffffff;
+}
+
+.cart-strip {
+  background: #ffffff;
+  border-top: 6px solid #2f7658;
+  padding: 12px 18px;
+  display: flex;
+  justify-content: space-between;
+  gap: 14px;
+  color: #214d3a;
+}
+
+.cart-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.cart-chip {
+  border: 1px solid #2f7658;
+  padding: 5px 8px;
+  font-size: 12px;
+}
+
+.cart-chip button,
+.cart-total button {
+  border: 0;
+  cursor: pointer;
+}
+
+.cart-chip button {
+  margin-left: 6px;
+  background: transparent;
+  color: #2f7658;
+  font-weight: 700;
+}
+
+.cart-total {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.cart-total button {
+  background: #2f7658;
+  color: #ffffff;
+  padding: 7px 12px;
+}

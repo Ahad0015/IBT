@@ -1,0 +1,10 @@
+Almaz Bekele,250
+Dawit Alemu,120
+Samuel Girma,400
+Almaz Bekele,150
+Hana Tesfaye,300
+Dawit Alemu,80
+Samuel Girma,220
+Hana Tesfaye,90
+Almaz Bekele,60
+Bethlehem Yohannes,500

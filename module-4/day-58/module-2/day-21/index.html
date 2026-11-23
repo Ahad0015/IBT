@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Signup Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+    }
+    label {
+      display: block;
+      margin-top: 10px;
+    }
+    input {
+      padding: 5px;
+      margin-top: 3px;
+    }
+    button {
+      margin-top: 15px;
+      padding: 6px 14px;
+    }
+    #error {
+      color: red;
+      margin-top: 10px;
+    }
+    #success {
+      color: green;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Signup Form</h2>
+
+  <form id="signup">
+    <label for="name">Full name</label>
+    <input type="text" id="name" name="name">
+
+    <label for="phone">Phone number (Ethiopian)</label>
+    <input type="text" id="phone" name="phone" placeholder="0912345678">
+
+    <button type="submit">Join</button>
+
+    <p id="error"></p>
+    <p id="success"></p>
+  </form>
+
+  <p id="signupCount">0 people have signed up so far.</p>
+
+  <script src="app.js"></script>
+</body>
+</html>
