@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Habesha Eatery Menu Card</title>
+
+<style>
+:root{
+    --primary:#0b5d3b;
+    --gold:#d4af37;
+    --white:#ffffff;
+    --gray:#f2f2f2;
+    --dark:#333333;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, sans-serif;
+    line-height:1.6;
+    background:var(--gray);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+}
+
+.menu-card{
+    width:350px;
+    background:var(--white);
+    border:1px solid var(--primary);
+    border-top:8px solid var(--gold);
+    padding:20px;
+}
+
+.menu-card h1{
+    color:var(--primary);
+    margin-bottom:10px;
+}
+
+.menu-card p{
+    margin-bottom:10px;
+}
+
+.price{
+    font-size:22px;
+    font-weight:bold;
+    color:var(--primary);
+}
+
+.price::before{
+    content:"ETB ";
+}
+
+.menu-card:hover{
+    box-shadow:0 0 10px var(--gold);
+}
+
+.ingredients{
+    list-style:none;
+    margin-top:15px;
+}
+
+.ingredients li{
+    padding:8px;
+}
+
+.ingredients li:nth-child(even){
+    background:var(--gray);
+}
+</style>
+
+</head>
+<body>
+
+<div class="menu-card">
+    <h1>Doro Wat</h1>
+
+    <p>Traditional Ethiopian spicy chicken stew served with fresh injera.</p>
+
+    <p class="price">350</p>
+
+    <h3>Ingredients</h3>
+
+    <ul class="ingredients">
+        <li>Chicken</li>
+        <li>Berbere Spice</li>
+        <li>Onion</li>
+        <li>Garlic</li>
+        <li>Egg</li>
+        <li>Injera</li>
+    </ul>
+</div>
+
+</body>
+</html>

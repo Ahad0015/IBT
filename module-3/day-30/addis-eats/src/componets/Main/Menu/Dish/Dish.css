@@ -1,0 +1,91 @@
+.dish-card {
+  height: 292px;
+  min-width: 0;
+  background: #f3d995;
+  color: #405446;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.dish-card:hover {
+  filter: brightness(0.98);
+}
+
+.dish-image {
+  display: block;
+  width: 100%;
+  height: 184px;
+  object-fit: cover;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 15px;
+  color: #3f4c43;
+}
+
+.dish-info {
+  margin-top: auto;
+  padding: 0 8px 8px;
+}
+
+.dish-meta {
+  min-height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 15px;
+}
+
+.dish-category,
+.dish-spicy,
+.dish-vegetarian {
+  white-space: nowrap;
+}
+
+.dish-spicy {
+  color: #8d6d7c;
+}
+
+.dish-vegetarian {
+  color: #536154;
+}
+
+.dish-bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1px;
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+.dish-name,
+.dish-price {
+  font-size: 16px;
+  line-height: 1.15;
+}
+
+.dish-name {
+  font-weight: 400;
+}
+
+.dish-price {
+  font-weight: 400;
+}
+
+@media (max-width: 650px) {
+  .dish-card {
+    height: 250px;
+  }
+
+  .dish-image {
+    height: 150px;
+  }
+
+  .dish-meta,
+  .dish-name,
+  .dish-price {
+    font-size: 13px;
+  }
+}

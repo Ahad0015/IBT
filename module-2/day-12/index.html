@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Habesha Eatery - Reservation, Menu, and Location">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Habesha Eatery</title>
+</head>
+<body>
+
+    <header>
+        <h1>Habesha Eatery</h1>
+        <p>Enjoy Traditional Ethiopian Food</p>
+
+        <img src="img1.jpg"
+             alt="Traditional Ethiopian food served on injera"
+             loading="lazy"
+             width="600">
+    </header>
+
+    <main>
+
+        <section>
+            <h2>Reservation Form</h2>
+
+            <form>
+
+                <label for="name">Name:</label><br>
+                <input type="text" id="name" name="name" required><br><br>
+
+                <label for="phone">Telephone:</label><br>
+                <input type="tel"
+                       id="phone"
+                       name="phone"
+                       pattern="09[0-9]{8}"
+                       placeholder="09xxxxxxxx"
+                       required><br><br>
+
+                <label for="guests">Guests:</label><br>
+                <input type="number"
+                       id="guests"
+                       name="guests"
+                       min="1"
+                       max="20"
+                       required><br><br>
+
+                <label for="date">Reservation Date:</label><br>
+                <input type="date"
+                       id="date"
+                       name="date"
+                       required><br><br>
+
+                <button type="submit">Book Now</button>
+
+            </form>
+        </section>
+
+        <section>
+            <h2>Menu</h2>
+
+            <table border="1">
+                <caption>Habesha Eatery Menu</caption>
+
+                <tr>
+                    <th scope="col">Food</th>
+                    <th scope="col">Description</th>
+                    <th scope="col">Price (ETB)</th>
+                </tr>
+
+                <tr>
+                    <td>Doro Wat</td>
+                    <td>Spicy chicken stew</td>
+                    <td>350</td>
+                </tr>
+
+                <tr>
+                    <td>Tibs</td>
+                    <td>Fried beef with vegetables</td>
+                    <td>300</td>
+                </tr>
+
+                <tr>
+                    <td>Shiro</td>
+                    <td>Chickpea stew</td>
+                    <td>200</td>
+                </tr>
+
+            </table>
+        </section>
+
+        <section>
+            <h2>Find Us</h2>
+
+            <iframe
+                src="https://www.google.com/maps/embed?pb="
+                width="600"
+                height="450"
+                style="border:0;"
+                allowfullscreen=""
+                loading="lazy"
+                title="Habesha Eatery Location">
+            </iframe>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Habesha Eatery. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
